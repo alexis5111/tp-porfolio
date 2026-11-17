@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+
+<html class="background">
+<script type="text/javascript" src="portfolio.js" defer></script>
+<link rel="stylesheet" href="portfolio.css" />
+
+
+<head>
+    <title>portfolio</title>
+</head>
+
+<body>
+    <header>
+        <button class="button"><a href="#localisation">localisation</a></button>
+        <button class="button"><a href="#a-propos">à propos</a></button>
+        <button class="button"><a href="#cv">CV</a></button>
+        <button class="button"><a href="#formulaire-de-contact">formulaire de contact</a></button>
+        <button class="button"><a href="#contactez-moi">Contactez-moi</a></button>
+    </header>
+    <button id="button"><p>changer le theme</p></button>
+    <button><a href="gallerie.html">galerie photo</a></button>
+    <main class="div02">
+        <h1>portfolio</h1>
+        <div class="container">
+            <img src="photo_moi.jpg" width="10%" height="10%">
+            <ul class="border">
+                <li>Nom: Cinquin</li>
+                <li>Prénom: Alexis</li>
+                <li>Age: 17ans</li>
+                <li>Email: alexis.cinquin@supinfo.com</li>
+                <li>Phone: +33 6 14 10 33 05</li>
+            </ul>
+        </div>
+        <h3 id="localisation">localisation</h3>
+        <p> Je vis actuellement à manissieux 69800 au 71 bis rue ambroise paré</p>
+        <h3 id="a-propos">à propos</h3>
+        <p>je suis un etudiant en informatique dans l'ecole supinfo </p>
+        <div class="center">
+            <h3 id="cv">CV</h3>
+            <p>vous pouvez consulter mon CV en cliquant sur le lien ci-dessous :</p>
+            <a href="file:///C:/Users/jeanm/Documents/supinfo/chapitre_1/CV.html">mon cv</a>
+            <h3 id="formulaire-de-contact">formulaire de contact</h3>
+            voici mon blog : <a class="cursive" href="file:///C:/Users/jeanm/Documents/supinfo/chapitre_1/blog.html">mon
+                blog</a>
+            <h3 id="contactez-moi">Contactez-moi</h3>
+            <p>Veuillez remplir le formulaire ci-dessous pour me contacter :</p>
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <label for="name">numero de telephone :</label>
+                <input type="number" name="name" required><br>
+                <label for="email">addresse mail :</label>
+                <input type="email" name="email" required><br>
+                <label for="name">access key :</label>
+                <input type="password" name="access_key" value="8d544b9d-e3af-422d-a1df-3ab4d782f9c8"><br>
+                <button type="submit">Submit</button><br>
+            </form>
+            <a href="#top">revenir en haut</a>
+        </div>
+    </main>
+</body>
+
+</html>

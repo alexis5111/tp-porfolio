@@ -1,0 +1,15 @@
+.mode-clair {
+    background-color: white;
+    color: black;
+}
+
+.mode-sombre {
+    background-color: black;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
