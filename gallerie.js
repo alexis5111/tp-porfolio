@@ -1,22 +1,18 @@
-let numeroImage = 0;
-const imagesParChargement = 10;
-const urls = ["https://picsum.photos/id/0/400/300",
-    "https://picsum.photos/id/1/400/300",
-    "https://picsum.photos/id/2/400/300",
-    "https://picsum.photos/id/3/400/300",
-    "https://picsum.photos/id/4/400/300",
-    "https://picsum.photos/id/5/400/300",
-    "https://picsum.photos/id/6/400/300",
-    "https://picsum.photos/id/7/400/300",
-    "https://picsum.photos/id/8/400/300",
-    "https://picsum.photos/id/9/400/300"
-]
+const gallery = document.getElementById("gallery");
 
+// Fonction pour récupérer une image
+async function fetchImage() {
+    const response = await fetch("https://picsum.photos/400/300");
 
-// Fonction pour charger 10 images
-function loadGalerie() {
+    return response.url;
+}
 
-    for (let i = 0; i < imagesParChargement; i++) {
+let numeroImage = 0
+
+async function loadImage() {
+    for (let i = 0; i < 10; i++) {
+
+        const imgUrl = await fetchImage();
 
         const img = document.createElement("img");
 
@@ -25,14 +21,19 @@ function loadGalerie() {
         img.alt = "Image de la galerie " + numeroImage;
 
         img.draggable = true;
+        
+        img.width = 400;
+        
+        img.height = 300;
 
         galerie.appendChild(img);
 
         numeroImage++;
+        
     }
 }
 
-loadGalerie();
+loadImage();
 
 window.addEventListener("scroll", () => {
 
@@ -41,7 +42,7 @@ window.addEventListener("scroll", () => {
         document.body.offsetHeight - 200
     ) {
 
-        loadGalerie();
+        loadImage();
 
     }
 
